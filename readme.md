@@ -61,3 +61,33 @@ To https://github.com/TimothyBelekollie/Gym-Git-Exercise-Solutions.git
 belek@TimothyBelekoll MINGW64 ~/Desktop/The GYM Trainership/git-exercise (main)
 $
 
+belek@TimothyBelekoll MINGW64 ~/Desktop/The GYM Trainership/git-exercise (dev)
+$ git stash save "team stash"
+Saved working directory and index state On dev: team stash
+
+belek@TimothyBelekoll MINGW64 ~/Desktop/The GYM Trainership/git-exercise (dev)
+$ git stash list
+stash@{0}: On dev: team stash
+stash@{1}: On dev: about stash
+stash@{2}: WIP on dev: 5a164c2 new changes
+
+belek@TimothyBelekoll MINGW64 ~/Desktop/The GYM Trainership/git-exercise (dev)
+$ git stash pop stash@{1}
+error: Your local changes to the following files would be overwritten by merge:
+        readme.md
+Please commit your changes or stash them before you merge.
+Aborting
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+        team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
